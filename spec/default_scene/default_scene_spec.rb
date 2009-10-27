@@ -13,4 +13,8 @@ describe "Default Scene" do
     end
   end
 
+  it "should have a display" do
+    scene.find("display").should_not be_nil
+  end
+
 end

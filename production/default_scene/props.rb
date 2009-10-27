@@ -1,4 +1,7 @@
 row do
+  display :id => "display"
+end
+row do
   calculator_number :id => 7, :text => 7
   calculator_number :id => 8, :text => 8
   calculator_number :id => 9, :text => 9
