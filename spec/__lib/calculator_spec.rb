@@ -4,11 +4,12 @@ require "calculator"
 describe Calculator do
 
   let(:calculator) {Calculator.new}
+  let(:display) {mock("Display", :observe => nil)}
   
   it "should have no operands on init" do
     calculator.operands.should == []
   end
-  
+    
   context "with no operands" do
     it "should add one number to the list of operands" do
       calculator.press_number(1)
@@ -37,7 +38,7 @@ describe Calculator do
     end
   end
   
-  context "two operands" do
+  context "with two operands" do
     before(:each) do
       calculator.press_number(6)
       calculator.press_function("+")
@@ -50,4 +51,35 @@ describe Calculator do
     end
   end
   
+  context "with one observer" do
+    before(:each) do
+      calculator.register_display_observer(display)
+    end
+    
+    it "should notify the observer on number press" do
+      display.should_receive(:observe).with(5)
+      
+      calculator.press_number(5)
+      calculator.display.should == 5
+    end
+    
+    it "should notify the observer on a second number press" do
+      calculator.press_number(5)
+      display.should_receive(:observe).with(58)
+
+      calculator.press_number(8)
+      calculator.display.should == 58
+    end
+    
+    it "should notify the observer when equals is pressed" do
+      calculator.press_number(6)
+      calculator.press_function("+")
+      calculator.press_number(3)
+      
+      display.should_receive(:observe).with(9)
+      
+      calculator.press_equals
+      calculator.display.should == 9
+    end
+  end
 end
