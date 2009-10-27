@@ -11,3 +11,6 @@ end
 task :llp do
   system "jruby -S limelight pack limelight_docs"
 end
+
+task :build => [:spec, :features] do
+end
