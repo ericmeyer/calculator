@@ -26,4 +26,5 @@ describe "Default Scene" do
     equals.should_not be_nil
     equals.name.should == "calculator_equals"
   end
+
 end
