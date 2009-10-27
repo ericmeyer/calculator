@@ -5,14 +5,9 @@
 # For a complete listing of style attributes see: http://limelightwiki.8thlight.com/index.php/Style_Attributes
 
 default_scene {
-  background_color :black
+  background_color :white
   horizontal_alignment :center
   vertical_alignment :center
   width "100%"
   height "100%"
-}
-
-root {
-  text_color :white
-  font_size 18
 }

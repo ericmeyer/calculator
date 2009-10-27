@@ -37,8 +37,9 @@ Transform /^prop "([^\"]*)"$/ do |prop_id|
   $scene.find(prop_id)
 end
 
-When /^I click the (prop "[^\"]*")$/ do |prop|
-  prop.mouse_clicked(nil)
+
+Given /^I click "([^\"]*)"$/ do |prop_id|
+  $scene.find(prop_id).mouse_clicked(nil)
 end
 
 Then /^the prop "([^\"]*)" should have text of "([^\"]*)"$/ do |id, text|
