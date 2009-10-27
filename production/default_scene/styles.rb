@@ -56,3 +56,7 @@ calculator_function {
     secondary_background_color "#ff9600"
   }
 }
+
+calculator_equals {
+  extends :calculator_function
+}
