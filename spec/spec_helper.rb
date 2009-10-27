@@ -3,7 +3,7 @@ require 'spec'
 require 'limelight/specs/spec_helper'
 
 # Set the Gem home to the frozen gems
-$PRODUCTION_PATH = File.expand_path(File.dirname(__FILE__) + "/../")
+$PRODUCTION_PATH = File.expand_path(File.dirname(__FILE__) + "/../production")
 Gem.use_paths(File.join($PRODUCTION_PATH , "__resources", "gems"), Gem.default_path)
 
 
