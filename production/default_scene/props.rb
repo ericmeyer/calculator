@@ -18,4 +18,5 @@ row do
 end
 row do
   calculator_number :id => 0, :text => 0
+  calculator_function :id => "plus", :text => "+"
 end

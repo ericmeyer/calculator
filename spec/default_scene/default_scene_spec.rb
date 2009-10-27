@@ -17,4 +17,7 @@ describe "Default Scene" do
     scene.find("display").should_not be_nil
   end
 
+  it "should have a plus button" do
+    scene.find("plus").should_not be_nil
+  end
 end
