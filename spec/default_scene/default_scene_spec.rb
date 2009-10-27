@@ -20,4 +20,10 @@ describe "Default Scene" do
   it "should have a plus button" do
     scene.find("plus").should_not be_nil
   end
+  
+  it "should have an equals button" do
+    equals = scene.find("equals")
+    equals.should_not be_nil
+    equals.name.should == "calculator_equals"
+  end
 end
