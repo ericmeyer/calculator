@@ -8,7 +8,7 @@ describe "Default Scene" do
     0.upto(9) do |number|
       button = scene.find(number)
       button.should_not be_nil
-      button.name.should == "calculator_number"
+      button.name.should == "calculator_button"
       button.text.should == number.to_s
     end
   end
