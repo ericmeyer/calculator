@@ -57,6 +57,12 @@ calculator_function {
   }
 }
 
-calculator_equals {
-  extends :calculator_function
+calculator_clear {
+  extends :calculator_button
+  background_color "#6f0000"
+  secondary_background_color "#920000"
+  hover {
+    background_color "#910000"
+    secondary_background_color "#a90000"
+  }
 }

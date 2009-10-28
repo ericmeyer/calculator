@@ -9,4 +9,11 @@ describe "CalculatorEquals" do
     
     scene.find("display").text.should == "47"
   end
+  
+  it "should handle bad input data" do
+    scene.find("display").text = "12+"
+    scene.find("equals").mouse_clicked(nil)
+    
+    scene.find("display").text.should == ""
+  end
 end

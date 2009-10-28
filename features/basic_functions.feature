@@ -17,5 +17,10 @@ Feature: Basic Functions
     Given I click "1"
     When I click "clear"
     Then the prop "display" should have text of ""
-
-
+    
+  Scenario: Bad input data
+    Given I click "1"
+    And I click "plus"
+    When I click "equals"
+    Then the prop "display" should have text of ""
+      
