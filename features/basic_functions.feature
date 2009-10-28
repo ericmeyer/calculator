@@ -12,3 +12,10 @@ Feature: Basic Functions
     Then the prop "display" should have text of "1+2"
     When I click "equals"
     Then the prop "display" should have text of "3"
+
+  Scenario: Clear Display
+    Given I click "1"
+    When I click "clear"
+    Then the prop "display" should have text of ""
+
+

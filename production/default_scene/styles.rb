@@ -24,9 +24,9 @@ row {
 }
 
 calculator_button {
-  height 170
-  width 170
-  rounded_corner_radius 80
+  height 130
+  width 130
+  rounded_corner_radius 60
   border_color :black
   border_width 1
   horizontal_alignment :center
