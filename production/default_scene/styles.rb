@@ -1,5 +1,7 @@
 default_scene {
+  gradient :on
   background_color "#555"
+  secondary_background_color "#777"
   vertical_alignment :center
   width "100%"
   height "100%"
