@@ -8,8 +8,13 @@ task :features do
   system "jruby -S cucumber features"
 end
 
-task :llp do
-  system "jruby -S limelight pack limelight_docs"
+desc "Generates the llp for the production."
+task :llp, :name do |t, args|
+  if args.name
+    system "jruby -S limelight pack production -n #{args.name}"
+  else
+    puts "Usage: rake llp[<name>]"
+  end
 end
 
 task :build => [:spec, :features] do
