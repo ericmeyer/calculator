@@ -1,7 +1,5 @@
 default_scene {
-  gradient :on
   background_color "#555"
-  secondary_background_color "#777"
   vertical_alignment :center
   width "100%"
   height "100%"
@@ -34,37 +32,30 @@ calculator_button {
   horizontal_alignment :center
   vertical_alignment :center
   margin 5
-  gradient :on
   font_size 48
 }
 
 calculator_number {
   extends :calculator_button
   background_color "#999"
-  secondary_background_color "#CCC"
   hover {
     border_color "#555"
     background_color "#AAA"
-    secondary_background_color "#DDD"
   }
 }
 
 calculator_function {
   extends :calculator_button
   background_color "#a76200"
-  secondary_background_color "#db8100"
   hover {
     background_color "#db8100"
-    secondary_background_color "#ff9600"
   }
 }
 
 calculator_clear {
   extends :calculator_button
   background_color "#6f0000"
-  secondary_background_color "#920000"
   hover {
     background_color "#910000"
-    secondary_background_color "#a90000"
   }
 }
