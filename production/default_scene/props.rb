@@ -1,6 +1,6 @@
-# row do
-#   display :id => "display"
-# end
+row do
+  display :id => "display"
+end
 row do
   calculator_button :id => 7, :text => 7, :styles => "calculator_number"
   calculator_button :id => 8, :text => 8, :styles => "calculator_number"
@@ -23,5 +23,5 @@ row do
   calculator_button :id => 0, :text => 0, :styles => "calculator_number"
   calculator_equals :id => "equals", :text => "=", :styles => "calculator_function"
   calculator_button :id => "divide", :text => "/", :styles => "calculator_function"
-  # calculator_clear :id => "clear", :text => "C"
+  calculator_clear :id => "clear", :text => "C"
 end

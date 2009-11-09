@@ -17,9 +17,6 @@ Before do
   Limelight::Specs.producer = Limelight::Producer.new($PRODUCTION_PATH)
   Limelight::Specs.producer.production.extend(MockProduction)
   Limelight::Specs.producer.open
-
-  stage = Limelight::Specs.producer.theater.stages[0]
-  $scene = stage.current_scene
 end
 
 #TODO - EWM - Figure out how to close limelight after each scenario properly.  Right now, one instance gets open per scenario.
@@ -33,15 +30,20 @@ at_exit do
   end
 end
 
+def scene
+  stage = Limelight::Specs.producer.theater.stages[0]
+  return stage.current_scene
+end
+
 Transform /^prop "([^\"]*)"$/ do |prop_id|
-  $scene.find(prop_id)
+  scene.find(prop_id)
 end
 
 
 Given /^I click "([^\"]*)"$/ do |prop_id|
-  $scene.find(prop_id).mouse_clicked(nil)
+  scene.find(prop_id).mouse_clicked(nil)
 end
 
 Then /^the prop "([^\"]*)" should have text of "([^\"]*)"$/ do |id, text|
-  $scene.find(id).text.should == text
+  scene.find(id).text.should == text
 end
